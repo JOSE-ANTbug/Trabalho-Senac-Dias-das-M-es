@@ -39,20 +39,26 @@
   </style>
 </head>
 <body>
-  <div class="mensagem" id="mensagem">
-  <div style="text-align: center; margin-top: 30px;">
+  <div class="mensagem" id="mensagem"> 
+  </div>
+  <p id="mensagem"></p>
+</div>
+
+<!-- Botão logo abaixo da frase -->
+<div style="text-align: center; margin-top: 20px;">
   <a href="LINK_DO_GOOGLE_FORM" target="_blank" style="
-    background-color: #ff69b4;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2em;
-    text-decoration: none;
+    background-color: #ffe0ec; /* mesma cor do fundo da frase */
+    color: #d63384;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 1.1em;
     font-family: 'Dancing Script', cursive;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-  " onmouseover="this.style.backgroundColor='#e55ea1'" onmouseout="this.style.backgroundColor='#ff69b4'">
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+  " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 10px rgba(0,0,0,0.15)'" 
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
     Responda o Formulario
   </a>
 </div>
