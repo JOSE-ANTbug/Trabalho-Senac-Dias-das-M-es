@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Mensagem para Mãe</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homenagem às Mães</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    html, body {
-      height: 100%;
-      width: 100%;
-    }
-    body {
-      background-image: url("https://www.kanguruinfo.com.br/wp-content/uploads/2018/04/Background-dia-das-maes.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      font-family: 'Nunito Sans', cursive;
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
+      background: url("https://www.kanguruinfo.com.br/wp-content/uploads/2018/04/Background-dia-das-maes.jpg") no-repeat center center fixed;
+      background-size: cover;
     }
-    .mensagem {
-      background: rgba(255, 255, 255, 0.7);
-      color: #4b2c20; /* Tom suave para combinar com a fonte */
-      padding: 20px 30px;
-      border-radius: 15px;
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.8em;
+
+    #container {
+      background-color: rgba(255, 224, 236, 0.85);
+      padding: 40px;
+      border-radius: 25px;
       text-align: center;
       max-width: 90%;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    #mensagem {
+      font-size: 1.8em;
+      color: #d63384;
+      margin-bottom: 25px;
+    }
+
+    .botao-form {
+      display: inline-block;
+      background-color: rgba(255, 224, 236, 0.85);
+      color: #d63384;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-size: 1.1em;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .botao-form:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
     }
   </style>
 </head>
 <body>
-  <div class="mensagem" id="mensagem"> 
+  <div id="container">
+    <p id="mensagem"></p>
+    <a class="botao-form" href="https://forms.office.com/Pages/ResponsePage.aspx?id=tATppfFwRE-hzDZjwzttimrWGmekzgZEtIpOHkjJHq1UQkhUQlVBMUU4WFhPUjdGT09BSzdPVFJNTy4u" target="_blank">
+      Responda o Formulario
+    </a>
   </div>
-  <p id="mensagem"></p>
-</div>
-<div style="text-align: center; margin-top: 20px;">
-  <a href="LINK_DO_GOOGLE_FORM" target="_blank" style="
-    background-color: #ffe0ec;
-    color: #d63384;
-    padding: 12px 28px;
-    border-radius: 25px;
-    font-size: 1.1em;
-    font-family: 'Dancing Script', cursive;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: inline-block;
-  " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 10px rgba(0,0,0,0.15)'" 
-     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
-    Responda o Formulario
-  </a>
-</div>
+
   <script>
-    const mensagens = [
-      "Pergunta 1: Se pudesse expressar em palavras o quanto sua mãe é importante para você, o que diria?",
-      "Pergunta 2: Como você vê o papel das mães na sociedade e o que elas representam para você pessoalmente?",
-      "Pergunta 3: De que maneira sua mãe impactou sua vida de uma forma única e especial?",
+    const frases = [
+      "Pergunta 1- O que significa ser mãe para você?" , 
+      "Pergunta 2- Qual é o impacto das mães na vida dos filhos?" , 
+      "Pergunta 3- Como podemos mostrar gratidão pelas mães em nosso dia a dia?" ,
     ];
 
-    const aleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
-    document.getElementById('mensagem').innerText = aleatoria;
+    const mensagem = document.getElementById("mensagem");
+    mensagem.textContent = frases[Math.floor(Math.random() * frases.length)];
   </script>
 </body>
 </html>
