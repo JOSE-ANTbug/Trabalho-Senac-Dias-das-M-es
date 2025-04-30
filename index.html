@@ -30,40 +30,43 @@
     #mensagem {
       font-size: 1.8em;
       color: #d63384;
-      margin-bottom: 25px;
+      margin-bottom: 35px; /* Espaço maior para separar do botão */
     }
 
     .botao-form {
       display: inline-block;
-      background-color: rgba(255, 224, 236, 0.85);
-      color: #d63384;
-      padding: 12px 28px;
-      border-radius: 25px;
+      background-color: #d63384; /* Cor sólida */
+      color: white;              /* Texto branco */
+      padding: 14px 32px;
+      border-radius: 30px;
       font-size: 1.1em;
+      font-weight: bold;
       text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: none;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
     .botao-form:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+      transform: scale(1.07);
+      background-color: #bd2b72;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
     }
   </style>
 </head>
 <body>
   <div id="container">
     <p id="mensagem"></p>
-    <a class="botao-form" href="https://forms.office.com/Pages/ResponsePage.aspx?id=tATppfFwRE-hzDZjwzttimrWGmekzgZEtIpOHkjJHq1UQkhUQlVBMUU4WFhPUjdGT09BSzdPVFJNTy4u" target="_blank">
-      Responda o Formulario
+    <a class="botao-form" href="https://forms.office.com/Pages/ResponsePage.aspx?id=tATppfFwRE-hzDZjwzttimrWGmekzgZEtIpOHkjJHq1UQkhUQlVBMUU4WFhPUjdGT09BSzdPVFJNTy4u" target="_blank" title="Abrir formulário de homenagem às mães">
+      Responda o Formulário
     </a>
   </div>
 
   <script>
     const frases = [
-      "Pergunta 1- O que significa ser mãe para você?" , 
-      "Pergunta 2- Qual é o impacto das mães na vida dos filhos?" , 
-      "Pergunta 3- Como podemos mostrar gratidão pelas mães em nosso dia a dia?" ,
+      "Pergunta 1 - O que significa ser mãe para você?", 
+      "Pergunta 2 - Qual é o impacto das mães na vida dos filhos?", 
+      "Pergunta 3 - Como podemos mostrar gratidão pelas mães em nosso dia a dia?"
     ];
 
     const mensagem = document.getElementById("mensagem");
